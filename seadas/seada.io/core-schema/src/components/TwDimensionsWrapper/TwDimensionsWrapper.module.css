@@ -1,0 +1,44 @@
+.InlineMode {
+    @apply flex flex-row w-full justify-between gap-2;
+
+    .DimensionItem {
+        @apply w-full;
+    }
+}
+
+.DimensionItemLabel {
+    @apply text-xs;
+}
+
+.VerticalMode {
+    @apply flex flex-col;
+
+    .DimensionItem {
+        @apply my-2;
+    }
+}
+
+.LockButton {
+    @apply absolute -top-8 right-12 scale-75;
+}
+
+.CardinalMode {
+    @apply h-44 relative;
+
+    .CardinalTopLeft {
+        @apply absolute top-0 left-1/2 -ml-16;
+    }
+
+    .CardinalEast {
+        @apply absolute right-0 top-1/2 -mt-8;
+    }
+
+    .CardinalSouth {
+        @apply absolute bottom-0 left-1/2 -ml-16;
+    }
+
+    .CardinalWest {
+        @apply absolute left-0 top-1/2 -mt-8;
+    }
+}
+

@@ -1,0 +1,140 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: 9dfb6ebf-6191-43c0-8b49-5d6c3112b309
+    label: Slider
+    type: '@seada.io/basic-ui/Slider'
+    props:
+      slidesPerView: 1
+      spaceBetween: 10
+      navigation: true
+      pagination: false
+      centeredSlides: false
+      autoplay: 0
+      autoplayDelay: 5000
+      pauseOnMouseEnter: false
+      size:
+        default: full
+        md:
+          - full
+          - auto
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '3'
+        - '0'
+      padding: 0
+      aspectRatio:
+        default: auto
+        md: panoramic
+        lg: panoramic
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: b568be6e-7d76-4269-8ded-c096a35ac341
+        label: Banner
+        type: '@seada.io/basic-ui/Banner'
+        props:
+          title:
+            en_US: Trusted studio headphones
+            it_IT: Le migliori cuffie di sempre
+          subtitle:
+            en_US: >-
+              Unleash the Future of Sound: Experience Freedom with Headless
+              Headphones!
+            it_IT: >-
+              Libera il potere della perfezione del suono con le nuove cuffie
+              bluetooth!
+          textAlign: center
+          verticalAlign: center
+          titleColor: white
+          subtitleColor: slate-300
+          buttonColor: black
+          size:
+            default: full
+            md: full
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio:
+            default: panoramic
+            md: video
+          borderWidth: 0
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: gray-800
+          overlayOpacity: 100
+          backgroundImage: >-
+            http://localhost:3001/images///headphones-51a84f41-9ff7-4235-bb59-5b948658b082.png
+          buttonLabel: Shop now !
+          buttonLink: /shop-all
+          visibility:
+            default: visible
+            md: visible
+      - id: 7f00ff31-a98f-4806-9176-b0da20d01ec6
+        label: Banner
+        type: '@seada.io/basic-ui/Banner'
+        props:
+          title:
+            en_US: Your space
+            it_IT: Il tuo spazio
+          subtitle:
+            en_US: Revolutionize Your Workspace
+            it_IT: Rivoluziona il tuo spazio di lavoro
+          textAlign: center
+          verticalAlign: center
+          titleColor: white
+          subtitleColor: white
+          buttonColor: black
+          size: full
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio: panoramic
+          borderWidth: 0
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: emerald-900
+          overlayOpacity: 100
+          backgroundImage: >-
+            https://eexoyj54wxoksbic.public.blob.vercel-storage.com/public/images/phoenix12879_modern_library_professional_book_bb18bc6d-613c-4715-a8ec-38dc94467ed7-fa0cc7e6-c578-4243-98ed-6948a8dd9925.png
+          visibility:
+            2xl: visible
+  - id: dcef5a58-4fe4-4d01-a8ff-0475dd2471fa
+    label: Products Carousel
+    type: '@seada.io/catalog/ProductsCarousel'
+    props:
+      slidesPerView: 5
+      spaceBetween: 10
+      navigation: false
+      pagination: false
+      centeredSlides: false
+      autoplay: false
+      autoplayDelay: 5000
+      pauseOnMouseEnter: false
+      visibility: visible
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: 0
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+      productKeys:
+        - OTS
+        - ABS
+        - TWB

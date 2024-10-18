@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema-ui/generated/json-schema/templates.json
+
+pageSource: bigcommerce
+layout: default
+components:
+  - id: f55b31d1-55d8-42b6-b62b-e87af999f0b3
+    label: Slider
+    type: '@seada.io/basic-ui/Slider'
+    props:
+      size:
+        default:
+          - 11/12
+          - auto
+      minSize: auto
+      maxSize: auto
+      margin:
+        default:
+          - 2
+          - auto
+      padding:
+        default: 0
+      aspectRatio:
+        default: wide
+      borderWidth: '0'
+      borderRadius:
+        default: none
+      borderColor: transparent
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 3b3fe3f9-45d4-4b87-b2e9-45bd07e765c9
+        label: Banner
+        type: '@seada.io/basic-ui/Banner'
+        props:
+          title: Title
+          subtitle: Lorem Ipsum Dolor Sit Amet
+          textAlign: center
+          verticalAlign: center
+          titleColor: white
+          subtitleColor: white
+          buttonColor: black
+          aspectRatio:
+            default: video
+          overlayColor: black
+          overlayOpacity: 55
+          backgroundImage:
+            default: >-
+              http://localhost:3001/images/phoenix12879_modern_library_professional_book_bb18bc6d-613c-4715-a8ec-38dc94467ed7-27b76f3a-302e-449a-a2fd-6d9a3e82ecae.png
+          margin:
+            default: 0
+          padding:
+            default: 2
+      - id: 57903355-6afa-4bd3-8d0d-8d3c4a55a78d
+        label: Banner
+        type: '@seada.io/basic-ui/Banner'
+        props:
+          title: Title
+          subtitle: Lorem Ipsum Dolor Sit Amet
+          textAlign: center
+          verticalAlign: center
+          titleColor: white
+          subtitleColor: white
+          buttonColor: black
+          aspectRatio:
+            default: video
+            md: wide
+          overlayColor: black
+          overlayOpacity: 55
+          backgroundImage:
+            default: >-
+              http://localhost:3001/images/avatar-5aa529e2-9ecf-4586-bf2d-b31b8061c65e.png
+            md: >-
+              http://localhost:3001/images/aicl-communications-office-70b25164-54c7-4fc8-a8dc-43642d9eb359.jpeg
+          borderRadius:
+            default:
+              - none
+              - none
+              - none
+              - none
+          margin:
+            default: 0
+          padding:
+            default: 0

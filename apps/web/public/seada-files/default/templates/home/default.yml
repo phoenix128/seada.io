@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema-ui/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: 45af4514-671b-40ee-ac59-03c2ddd79c8b
+    label: Slider
+    type: '@seada.io/basic-ui/Slider'
+    props:
+      slidesPerView: 1
+      spaceBetween: 10
+      navigation: false
+      pagination: false
+      centeredSlides: false
+      autoplay: 0
+      autoplayDelay: 5000
+      pauseOnMouseEnter: false
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: 0
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 87e5f7cf-de22-428c-8d1d-d334fc385e42
+        label: Banner
+        type: '@seada.io/basic-ui/Banner'
+        props:
+          title: Title
+          subtitle: Lorem Ipsum Dolor Sit Amet
+          textAlign: center
+          verticalAlign: center
+          titleColor: white
+          subtitleColor: white
+          buttonColor: black
+          size: full
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio: video
+          borderWidth: 0
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: black
+          overlayOpacity: 65
+          backgroundImage: >-
+            http://localhost:3001/images/aicl-communications-office-70b25164-54c7-4fc8-a8dc-43642d9eb359.jpeg
+      - id: 87e5f7cf-de22-428c-8d1d-d334fc385e43
+        label: Banner
+        type: '@seada.io/basic-ui/Banner'
+        props:
+          title: Title
+          subtitle: Lorem Ipsum Dolor Sit Amet
+          textAlign: center
+          verticalAlign: center
+          titleColor: white
+          subtitleColor: white
+          buttonColor: black
+          size: full
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio: video
+          borderWidth: 0
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: black
+          overlayOpacity: 65
+          backgroundImage: >-
+            http://localhost:3001/images/aicl-communications-office-70b25164-54c7-4fc8-a8dc-43642d9eb359.jpeg

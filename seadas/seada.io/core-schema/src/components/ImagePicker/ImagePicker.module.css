@@ -1,0 +1,23 @@
+.ImagePicker {
+    @apply relative cursor-pointer;
+}
+
+.Buttons {
+    @apply absolute bottom-2 z-10 flex flex-row gap-2 w-full justify-end px-2;
+}
+
+.ChangeButton {
+
+}
+
+.ClearButton {
+
+}
+
+.ClearIcon {
+    @apply w-6 h-6;
+}
+
+.Image {
+    @apply aspect-video;
+}

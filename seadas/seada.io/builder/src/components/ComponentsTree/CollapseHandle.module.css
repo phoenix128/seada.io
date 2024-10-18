@@ -1,0 +1,3 @@
+.CollapseHandle {
+    @apply block mr-2 text-foreground-300;
+}

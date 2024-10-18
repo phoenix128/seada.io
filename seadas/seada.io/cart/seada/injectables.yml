@@ -1,0 +1,18 @@
+root-contexts:
+  value:
+    - type: reference
+      value: "@seada.io/cart/contexts/CartContext/CartContext:CartContextProvider"
+
+copilot-excluded-components:
+  type: raw
+  value:
+    - "@seada.io/cart/SideCart"
+
+product-card-actions:
+  value:
+    - type: reference
+      value: "@seada.io/cart/components/AddToCartButton"
+port-classes:
+  value:
+    - cart
+    - checkout

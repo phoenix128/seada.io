@@ -1,0 +1,4 @@
+* {
+    -webkit-backface-visibility: hidden;
+    transition: all .1s;
+}

@@ -1,0 +1,117 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: ca6d74e5-3ad3-402a-b4e8-b26b07a66d41
+    label: Search Term
+    type: '@seada.io/search/SearchTerm'
+    props:
+      fontSize: lg
+      textAlign: left
+      textColor: black
+      letterSpacing: wide
+      leading: normal
+      fontWeight: semibold
+      fontStyle: not-italic
+      textDecoration: no-underline
+      textDecorationColor: black
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '3'
+        - '0'
+        - '0'
+        - '4'
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+  - id: 2e1b44ed-7609-4be4-904f-77374bc07f33
+    label: Flex Layout
+    type: '@seada.io/basic-ui/FlexLayout'
+    props:
+      flexDirection: row
+      flexAlign: start
+      gap:
+        default: '4'
+        md: '4'
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        default:
+          - '4'
+          - '0'
+      padding:
+        default: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 8521ff1a-8a32-47b7-85aa-2370e87b2b8a
+        label: Facets Sidebar
+        type: '@seada.io/catalog/FacetsSidebar'
+        props:
+          size:
+            default: 4/12
+            sm: 4/12
+            md: 4/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+      - id: 39893dec-1980-4ddf-b648-36658ec75b9a
+        label: Products Grid
+        type: '@seada.io/catalog/ProductsGrid'
+        props:
+          size:
+            default: full
+            sm: 8/12
+            md: 9/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+          columns:
+            default: '4'
+            sm: '1'
+            md: '2'
+          gap:
+            default: '4'
+  - id: aa7df4ad-9ef5-4323-a30c-24484c8a213d
+    label: Products Pagination
+    type: '@seada.io/catalog/ProductsPagination'
+    props:
+      showControls: true
+      align: center
+      siblings: '1'
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: '0'
+      padding: '0'
+      aspectRatio: auto
+      componentReference: 39893dec-1980-4ddf-b648-36658ec75b9a

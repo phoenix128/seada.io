@@ -1,0 +1,7 @@
+**/build
+**/.next
+**/.turbo
+**/.idea
+.git
+**/node_modules
+**/generated

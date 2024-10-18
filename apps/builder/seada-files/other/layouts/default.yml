@@ -1,0 +1,248 @@
+# yaml-language-server: $schema=../../../../../seadas/seada.io/core-schema/generated/json-schema/layouts.json
+
+components:
+  - id: 58fef02c-9c5b-4c17-b8b3-2833179b8359
+    label: Header
+    type: '@seada.io/basic-ui/FlexLayout'
+    props:
+      flexDirection:
+        default: row
+        sm: row
+      flexAlign: center
+      flexJustify: between
+      gap: '4'
+      size:
+        - 11/12
+        - '14'
+      minSize: auto
+      maxSize: screen-xl
+      margin:
+        - '2'
+        - auto
+      padding: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 35835b97-75e3-4c9c-86b4-b7efe1416122
+        label: Flex Layout
+        type: '@seada.io/basic-ui/FlexLayout'
+        props:
+          flexDirection: row
+          flexAlign: center
+          flexJustify: start
+          gap: '0'
+          size: full
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio: auto
+          borderWidth: 0
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+        children:
+          - id: 24d0a1b6-c486-4142-9832-44268078e1c9
+            label: Title
+            type: '@seada.io/basic-ui/Text'
+            props:
+              hasHtml: false
+              text:
+                en_US: Seada.io Sample Site
+                it_IT: Sito dimostrativo
+              fontSize:
+                default: 2xl
+                md: xl
+                sm: sm
+              textAlign: left
+              textColor: black
+              letterSpacing: normal
+              leading: normal
+              fontWeight: semibold
+              fontStyle: not-italic
+              textDecoration: no-underline
+              textDecorationColor: black
+              size: full
+              minSize: auto
+              maxSize: auto
+              margin: 0
+              padding: 0
+              aspectRatio: auto
+              borderWidth: 0
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+          - id: 131b558a-fa57-4ca7-8284-915c1e651855
+            label: Desktop Search Bar
+            type: '@seada.io/search/SearchBar'
+            props:
+              size:
+                default: full
+              minSize: auto
+              maxSize: auto
+              margin: 0
+              padding: 0
+              aspectRatio: auto
+              borderWidth: 0
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+              maxResults: 10
+              visibility:
+                default: visible
+                sm: hidden
+            source: bigcommerce
+      - id: c3da5819-98f0-48cc-83d4-0034728f7159
+        label: Flex Layout
+        type: '@seada.io/basic-ui/FlexLayout'
+        props:
+          flexDirection: row
+          flexAlign: start
+          flexJustify: start
+          gap: '4'
+          size: auto
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio: auto
+          borderWidth: 0
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+        children:
+          - id: 4a88b4f5-8ef9-410a-baa2-63bf9559713f
+            label: Cart Icon
+            type: '@seada.io/cart/CartIcon'
+            props:
+              size: '8'
+              minSize: auto
+              maxSize: auto
+              margin: '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+              displayCount: true
+              onClick: sidecart
+            source: bigcommerce
+          - id: 6d585ad7-11e4-44b5-8998-66624583846f
+            label: User Icon
+            type: '@seada.io/user/UserIcon'
+            props:
+              size: '8'
+              minSize: auto
+              maxSize: auto
+              margin: '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+            source: bigcommerce
+  - id: 381a669a-cf59-4b32-bfbe-8d783514d530
+    label: Mobile Search Bar
+    type: '@seada.io/search/SearchBar'
+    props:
+      minChars: 2
+      maxResults: 5
+      visibility:
+        default: hidden
+        2xl: disabled
+        sm: visible
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: 0
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+  - type: '@seada.io/catalog/CategoryNavBar'
+    id: navbar
+    props:
+      overlayColor: gray-50
+      overlayOpacity: 100
+      textColor: gray-600
+      borderWidth:
+        default:
+          - '1'
+          - '0'
+          - '1'
+          - '0'
+      borderRadius:
+        default:
+          - none
+          - none
+          - none
+          - none
+      borderColor: gray-300
+      justify:
+        default: center
+        sm: start
+      fontWeight:
+        default: semibold
+      fontSize:
+        default: sm
+      size:
+        - full
+        - '12'
+      padding: '0'
+      visibility:
+        xs: visible
+      mobileMenu:
+        sm: true
+    source: bigcommerce
+  - id: f78711b6-d8d3-4c26-897f-232b2ed4e335
+    label: Page Content
+    type: '@seada.io/basic-ui/PageContent'
+    props:
+      size: 11/12
+      minSize: auto
+      maxSize: screen-xl
+      margin:
+        - '0'
+        - auto
+      padding: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius:
+        default:
+          - none
+          - none
+          - none
+          - none
+      borderColor: transparent
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+  - id: 5118cf83-43e4-490d-858a-20aa9fb0e02c
+    label: Side Cart
+    type: '@seada.io/cart/SideCart'
+    source: bigcommerce
+    props:
+      autoOpen: false

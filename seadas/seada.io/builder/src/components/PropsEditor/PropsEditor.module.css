@@ -1,0 +1,60 @@
+.PropsEditor {
+    @apply m-4 mb-12;
+}
+
+.AdvancedModeSwitch {
+    @apply my-4;
+}
+
+.Group {
+    @apply my-4;
+}
+
+.GroupIcon {
+    @apply text-blue-300;
+}
+
+.GroupTitle {
+    @apply font-semibold text-sm text-blue-500;
+}
+
+.Content {
+    @apply overflow-hidden;
+}
+
+.Field {
+    @apply my-2 border-gray-600;
+}
+
+.FieldTitle {
+    @apply text-xs font-semibold flex-1 text-gray-400;
+}
+
+.FieldHeader {
+    @apply mb-2 flex flex-row items-center w-full;
+}
+
+.FieldHeaderButtons {
+    @apply flex flex-row gap-0 -mr-1;
+
+
+    > * {
+        @apply scale-85;
+    }
+}
+
+.FieldEditor {
+    @apply flex-1;
+}
+
+.Source {
+    @apply mt-2;
+}
+
+.Search {
+    @apply mb-2;
+}
+
+.Loading {
+    @apply h-full w-96 flex flex-col gap-4 items-center justify-center bg-black bg-opacity-30 absolute z-40 backdrop-blur-sm -m-3;
+}

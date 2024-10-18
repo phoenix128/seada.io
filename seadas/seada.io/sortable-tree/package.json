@@ -1,0 +1,58 @@
+{
+  "name": "@seada.io/sortable-tree",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/shaddix/dnd-kit-sortable-tree#readme",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "Readme.MD"
+  ],
+  "author": "Shaddix",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "tree",
+    "dndkit",
+    "react",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@apollo/experimental-nextjs-app-support": "0.8.0",
+    "tailwind-merge": "^2.3.0",
+    "react-merge-refs": "^2.0.1"
+  },
+  "peerDependencies": {
+    "@dnd-kit/core": ">=6.0.5",
+    "@dnd-kit/sortable": ">=7.0.1",
+    "@dnd-kit/utilities": ">=3.2.0",
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "devDependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/sortable": "^7.0.2",
+    "@dnd-kit/utilities": "^3.2.1",
+    "@types/react-dom": "^18.2.0",
+    "@welldone-software/why-did-you-render": "^8.0.1",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
+    "copyfiles": "^2.3.0",
+    "cssnano": "^5.0.12",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "postcss": "^8.4.4",
+    "prettier": "2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.3.1",
+    "react-is": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tsdx": "^0.13.3",
+    "tslib": "^2.3.1",
+    "typescript": "^4.8.4"
+  }
+}

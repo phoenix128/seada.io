@@ -1,0 +1,210 @@
+layout: default
+components:
+  - id: 3fb69c30-7a43-41f0-b6aa-3d84167c8fc7
+    label: Product Name
+    type: '@seada.io/commerce-ui/ProductName'
+    props:
+      fontSize:
+        default: xl
+      textAlign: center
+      textColor: gray-900
+      letterSpacing: normal
+      leading: normal
+      fontWeight:
+        default: semibold
+      fontStyle: not-italic
+      textDecoration: no-underline
+      textDecorationColor: black
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        default:
+          - '0'
+          - '0'
+          - '3'
+          - '0'
+      padding: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children: []
+  - id: cfc5b372-a9d8-438f-89dc-46fe57c6beac
+    label: Flex Layout
+    type: '@seada.io/basic-ui/FlexLayout'
+    props:
+      flexDirection: row
+      flexAlign: start
+      gap:
+        default: '4'
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: '0'
+      padding: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 0d6efc36-3353-49cd-b3ea-590c7b1eed10
+        label: Product Images Gallery
+        type: '@seada.io/commerce-ui/ProductGallery'
+        props:
+          size:
+            default: 5/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+        children: []
+      - id: be3ccc92-873f-4925-a01f-832262f50a43
+        label: Product details
+        type: '@seada.io/basic-ui/FlexLayout'
+        props:
+          flexDirection:
+            default: col
+          flexAlign: start
+          gap: '0'
+          size:
+            default: 7/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+        children:
+          - id: bc374593-5443-44ab-ba16-3a860099422b
+            label: Product Description
+            type: '@seada.io/commerce-ui/ProductDescription'
+            props:
+              fontSize: base
+              textAlign: left
+              textColor: black
+              letterSpacing: normal
+              leading: normal
+              fontWeight: normal
+              fontStyle: not-italic
+              textDecoration: no-underline
+              textDecorationColor: black
+              size: full
+              minSize: auto
+              maxSize: auto
+              margin: '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+            children: []
+          - id: 66110961-38eb-4aba-80ec-58833bf2717e
+            label: Product Options
+            type: '@seada.io/commerce-ui/ProductOptions'
+            props:
+              size: full
+              minSize: auto
+              maxSize: auto
+              margin:
+                default:
+                  - '3'
+                  - '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+            children: []
+          - id: f2eb1b36-9b18-4c1d-9586-928fe4fcb915
+            label: Add To Cart
+            type: '@seada.io/commerce-ui/AddToCart'
+            props:
+              size: full
+              minSize: auto
+              maxSize: auto
+              margin: '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+          - id: e59a9300-f4bb-43a0-839b-1e3723bdf354
+            label: Product Price
+            type: '@seada.io/commerce-ui/ProductPrice'
+            props:
+              fontSize:
+                default: lg
+              textAlign: end
+              textColor: red-500
+              letterSpacing: normal
+              leading: normal
+              fontWeight:
+                default: semibold
+              fontStyle: not-italic
+              textDecoration: no-underline
+              textDecorationColor: black
+              size: full
+              minSize: auto
+              maxSize: auto
+              margin: '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100
+          - id: dcab9e8a-96f9-45d8-8bb7-4b8528f4e5ff
+            label: Reference Price
+            type: '@seada.io/commerce-ui/ProductReferencePrice'
+            props:
+              fontSize: base
+              textAlign: end
+              textColor: gray-600
+              letterSpacing: normal
+              leading: normal
+              fontWeight: normal
+              fontStyle: not-italic
+              textDecoration: line-through
+              textDecorationColor: black
+              size: full
+              minSize: auto
+              maxSize: auto
+              margin: '0'
+              padding: '0'
+              aspectRatio: auto
+              borderWidth: '0'
+              borderRadius: none
+              borderColor: black
+              borderStyle: solid
+              overlayColor: transparent
+              overlayOpacity: 100

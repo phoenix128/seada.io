@@ -1,0 +1,3 @@
+"@seada.io/catalog/spi/get-product-card-actions":
+  default:
+    actions: "product-card-actions"

@@ -1,0 +1,4 @@
+component-props-middlewares:
+  value:
+    - type: reference
+      value: "@seada.io/core-schema/service/transform-properties"

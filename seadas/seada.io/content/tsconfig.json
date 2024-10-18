@@ -1,0 +1,76 @@
+{
+  "extends": "tsconfig/seadas.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "src",
+    "paths": {
+      "@seada.theme.source/theme/*": ["../../../local/theme/src/*"],
+      "@seada.theme/theme/*": ["../../../local/theme/src/*"],
+      "@seada.io.source/algolia/*": ["../../algolia/src/*"],
+      "@seada.io/algolia/*": [
+        "../../algolia/generated/*",
+        "../../algolia/src/*"
+      ],
+      "@seada.io.source/basic-ui/*": ["../../basic-ui/src/*"],
+      "@seada.io/basic-ui/*": [
+        "../../basic-ui/generated/*",
+        "../../basic-ui/src/*"
+      ],
+      "@seada.io.source/bigcommerce/*": ["../../bigcommerce/src/*"],
+      "@seada.io/bigcommerce/*": [
+        "../../bigcommerce/generated/*",
+        "../../bigcommerce/src/*"
+      ],
+      "@seada.io.source/builder/*": ["../../builder/src/*"],
+      "@seada.io/builder/*": [
+        "../../builder/generated/*",
+        "../../builder/src/*"
+      ],
+      "@seada.io.source/builder-copilot/*": ["../../builder-copilot/src/*"],
+      "@seada.io/builder-copilot/*": [
+        "../../builder-copilot/generated/*",
+        "../../builder-copilot/src/*"
+      ],
+      "@seada.io.source/cart/*": ["../../cart/src/*"],
+      "@seada.io/cart/*": ["../../cart/generated/*", "../../cart/src/*"],
+      "@seada.io.source/catalog/*": ["../../catalog/src/*"],
+      "@seada.io/catalog/*": [
+        "../../catalog/generated/*",
+        "../../catalog/src/*"
+      ],
+      "@seada.io.source/catalog-search/*": ["../../catalog-search/src/*"],
+      "@seada.io/catalog-search/*": [
+        "../../catalog-search/generated/*",
+        "../../catalog-search/src/*"
+      ],
+      "@seada.io/content/*": ["./*"],
+      "@seada.io.source/core/*": ["../../core/src/*"],
+      "@seada.io/core/*": ["../../core/generated/*", "../../core/src/*"],
+      "@seada.io.source/core-schema/*": ["../../core-schema/src/*"],
+      "@seada.io/core-schema/*": [
+        "../../core-schema/generated/*",
+        "../../core-schema/src/*"
+      ],
+      "@seada.io.source/customer/*": ["../../customer/src/*"],
+      "@seada.io/customer/*": [
+        "../../customer/generated/*",
+        "../../customer/src/*"
+      ],
+      "@seada.io.source/foundation-ui/*": ["../../foundation-ui/src/*"],
+      "@seada.io/foundation-ui/*": ["../../foundation-ui/src/*"],
+      "@seada.io.source/search/*": ["../../search/src/*"],
+      "@seada.io/search/*": ["../../search/src/*"],
+      "@seada.io.source/sortable-tree/*": ["../../sortable-tree/src/*"],
+      "@seada.io/sortable-tree/*": ["../../sortable-tree/src/*"],
+      "@seada.io.source/user/*": ["../../user/src/*"],
+      "@seada.io/user/*": ["../../user/src/*"],
+      "@seada.io.source/wordpress/*": ["../../wordpress/src/*"],
+      "@seada.io/wordpress/*": [
+        "../../wordpress/generated/*",
+        "../../wordpress/src/*"
+      ]
+    }
+  },
+  "include": ["declaration.d.ts", "src"],
+  "exclude": ["node_modules", "dist"]
+}

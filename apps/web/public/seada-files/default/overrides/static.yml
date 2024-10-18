@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=../../../../../seadas/seada.io/core-schema-ui/generated/json-schema/overrides.json
+
+overrides: []

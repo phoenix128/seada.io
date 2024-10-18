@@ -1,0 +1,56 @@
+router-handlers:
+  type: array
+  value:
+    - type: reference
+      value: "@seada.io/core/service/page-router/static-router"
+    - type: reference
+      value: "@seada.io/core/service/page-router/adapter-routers"
+adapter-router-handlers:
+  type: map
+  value: { }
+data-provider-adapters:
+  type: map
+  value: { }
+component-props-middlewares:
+  type: array
+  value: [ ]
+root-contexts:
+  type: array
+  value: [ ]
+i18n-providers:
+  type: array
+  value: [ ]
+page-components:
+  type: map
+  value: { }
+hooks-adapters:
+  type: map
+  value: { }
+cache-store-factories:
+  type: map
+  value:
+    memory:
+      type: reference
+      value: "@seada.io/core/service/cache/memory-cache-store-factory"
+    vercel-kv:
+      type: reference
+      value: "@seada.io/core/service/cache/vercel-kv-cache-store-factory"
+    incremental:
+      type: reference
+      value: "@seada.io/core/service/cache/incremental-cache-store-factory"
+    redis:
+      type: reference
+      value: "@seada.io/core/service/cache/redis-cache-store-factory"
+
+copilot-excluded-components:
+  type: raw
+  value:
+    - "@seada.io/basic-ui/PageContent"
+    - "@seada.io/basic-ui/Header"
+
+source-setups:
+  type: map
+  value: { }
+port-classes:
+  type: raw
+  value: [ ]

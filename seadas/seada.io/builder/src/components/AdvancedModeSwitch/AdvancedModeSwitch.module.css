@@ -1,0 +1,7 @@
+.AdvancedModeSwitch {
+    
+}
+
+.Label {
+    @apply font-semibold text-xs;
+}

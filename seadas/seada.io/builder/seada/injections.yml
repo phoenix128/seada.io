@@ -1,0 +1,3 @@
+"@seada.io/builder/service/storage/get-storage-adapter":
+  default:
+    adapters: "builder-storage-adapters"

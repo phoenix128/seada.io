@@ -1,0 +1,11 @@
+.AddNewButton {
+    @apply text-xs flex flex-row text-primary items-center h-7 py-1 cursor-pointer rounded-md px-2;
+
+    &:hover {
+        @apply bg-default-50;
+    }
+}
+
+.AddIcon {
+    @apply w-5 h-5 ml-0.5 mr-2;
+}

@@ -1,0 +1,12 @@
+"@seada.io/core-schema/spi/components/get-page-components-schema-collection":
+  default:
+    schemas: "page-components-schemas"
+"@seada.io/core-schema/spi/components/get-schema-components":
+  default:
+    components: "schema-components"
+"@seada.io/core-schema/spi/components/get-component-type-schemas":
+  default:
+    schemas: "component-type-schemas"
+"@seada.io/core-schema/spi/components/get-schema-component-transformers":
+  default:
+    transformers: "schema-component-transformers"

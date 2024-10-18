@@ -1,0 +1,7 @@
+catalog-quick-search-transformers:
+  type: map
+  value: { }
+
+catalog-search-result-transformers:
+  type: map
+  value: { }

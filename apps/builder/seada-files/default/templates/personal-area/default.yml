@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: 6f960802-7e4c-4053-82f0-bb0fe2aede46
+    label: Modify User Data
+    type: '@seada.io/user/ModifyUserData'
+    props:
+      size: 7/12
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '5'
+        - auto
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+  - id: 1ce11919-45e8-476e-8a61-05021d946a92
+    label: ''
+    type: '@seada.io/customer/ModifyAddresses'
+    props:
+      size: 7/12
+      minSize: auto
+      maxSize: auto
+      margin: auto
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+      columns: '3'
+      gap: '4'
+  - id: cb25ce02-95b3-4d22-ae36-8bb9f5288923
+    label: ''
+    type: '@seada.io/customer/OrdersTable'
+    props:
+      size: 7/12
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '6'
+        - auto
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100

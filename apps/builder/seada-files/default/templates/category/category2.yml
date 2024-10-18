@@ -1,0 +1,145 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: 4056692c-84ba-4f16-9f49-7965320a9553
+    label: Facets Sidebar
+    type: '@seada.io/catalog/FacetsSidebar'
+    props:
+      mobileMode:
+        default: true
+      visibility:
+        default: hidden
+        sm: visible
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: auto
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+  - id: 2e1b44ed-7609-4be4-904f-77374bc07f33
+    label: Flex Layout
+    type: '@seada.io/basic-ui/FlexLayout'
+    props:
+      flexDirection: row
+      flexAlign: start
+      gap:
+        default: '4'
+        md: '4'
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        default:
+          - '4'
+          - '0'
+      padding:
+        default: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 8521ff1a-8a32-47b7-85aa-2370e87b2b8a
+        label: Facets Sidebar
+        type: '@seada.io/catalog/FacetsSidebar'
+        props:
+          size:
+            default: 4/12
+            sm: 4/12
+            md: 4/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+          visibility:
+            default: visible
+            sm: hidden
+          mobileMode: false
+      - id: 39893dec-1980-4ddf-b648-36658ec75b9a
+        label: Products Grid
+        type: '@seada.io/catalog/ProductsGrid'
+        props:
+          size:
+            default: full
+            sm: full
+            md: 9/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+          columns:
+            default: '4'
+            sm: 2
+            md: '2'
+            lg: 3
+            xs: 2
+          gap:
+            default: '4'
+          productsPerPage: 8
+  - id: aa7df4ad-9ef5-4323-a30c-24484c8a213d
+    label: Products Pagination
+    type: '@seada.io/catalog/ProductsPagination'
+    props:
+      showControls: true
+      align: center
+      siblings: '1'
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: '0'
+      padding: '0'
+      aspectRatio: auto
+      componentReference: 39893dec-1980-4ddf-b648-36658ec75b9a
+  - id: 46df90ee-d8e1-42ca-b21b-ca02c5185960
+    label: Page Title
+    type: '@seada.io/basic-ui/Text'
+    props:
+      hasHtml: true
+      text: '<b>Categoria</b>: ${category.name}'
+      fontSize: base
+      textAlign: left
+      textColor: black
+      letterSpacing: normal
+      leading: normal
+      fontWeight: normal
+      fontStyle: not-italic
+      textDecoration: no-underline
+      textDecorationColor: black
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '3'
+        - '2'
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100

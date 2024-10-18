@@ -1,0 +1,56 @@
+version: '3.3'
+name: "seada"
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-cache-data:/data
+    command: redis-server
+
+  mailcatcher:
+    image: schickling/mailcatcher:latest
+
+  wordpress:
+    build: ./wordpress
+    restart: always
+    depends_on:
+      - wordpress-mysql
+      - mailcatcher
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_ADMIN_USERNAME: admin
+      WORDPRESS_ADMIN_PASSWORD: 123123q!
+      WORDPRESS_ADMIN_EMAIL: some.email@email.com
+      WORDPRESS_TITLE: "Seada.io"
+      WORDPRESS_URL: "http://localhost:8080"
+    volumes:
+      - wordpress-www-data:/var/www/html
+      - ./wordpress/config/php.ini-production:/usr/local/etc/php/php.ini-production
+      - ./wordpress/config/php.ini-development:/usr/local/etc/php/php.ini-development
+      - ./wordpress/config/msmtprc:/etc/msmtprc
+      - ./wordpress/config/wp-config.php:/var/www/html/wp-config.php
+    tmpfs:
+      - /tmp:mode=1777
+
+  wordpress-mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - wordpress-mysql-db-data:/var/lib/mysql
+
+volumes:
+  wordpress-www-data:
+    driver: local
+  wordpress-mysql-db-data:
+    driver: local
+  redis-cache-data:
+    driver: local

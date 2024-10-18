@@ -1,0 +1,7 @@
+.ShadeLabel {
+    @apply mt-4 text-xs font-semibold;
+}
+
+.ColorPreview {
+    @apply my-4 h-14;
+}

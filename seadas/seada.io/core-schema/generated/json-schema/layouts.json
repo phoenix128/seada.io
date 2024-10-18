@@ -1,0 +1,6140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "type": "object",
+  "properties": {
+    "components": {
+      "type": "array",
+      "description": "List of template components",
+      "items": {
+        "$ref": "#/definitions/componentItem"
+      }
+    },
+    "pageSource": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "componentItem": {
+      "oneOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/Banner"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "title": {
+                    "$ref": "#/definitions/types/1118b6172edb82c73783651c99f16919"
+                  },
+                  "subtitle": {
+                    "$ref": "#/definitions/types/1118b6172edb82c73783651c99f16919"
+                  },
+                  "buttonLabel": {
+                    "$ref": "#/definitions/types/1118b6172edb82c73783651c99f16919"
+                  },
+                  "buttonLink": {
+                    "$ref": "#/definitions/types/4b55b2183956729da9fb92d0487473f2"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "verticalAlign": {
+                    "$ref": "#/definitions/types/965d5078c7148d3fe5393dcad2c3be0c"
+                  },
+                  "titleColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "subtitleColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "buttonColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/Box"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/ColumnsLayout"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  },
+                  "columns": {
+                    "$ref": "#/definitions/types/14c75b909f8ca2212c389c1a11918489"
+                  },
+                  "gap": {
+                    "$ref": "#/definitions/types/cd0ce2a6c86a2b0e84c696c4a215d361"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/FlexLayout"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "flexDirection": {
+                    "$ref": "#/definitions/types/d6832be61173cf488c6f227c5bf73a11"
+                  },
+                  "flexAlign": {
+                    "$ref": "#/definitions/types/7615f56d445c16ba9925d234facb2e5d"
+                  },
+                  "flexJustify": {
+                    "$ref": "#/definitions/types/849dabc4b146b297e7ce81b4f236d42c"
+                  },
+                  "gap": {
+                    "$ref": "#/definitions/types/cd0ce2a6c86a2b0e84c696c4a215d361"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/GridLayout"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "columns": {
+                    "$ref": "#/definitions/types/dc09dd69d06ab6307be99e3f94ca7c65"
+                  },
+                  "gap": {
+                    "$ref": "#/definitions/types/cd0ce2a6c86a2b0e84c696c4a215d361"
+                  },
+                  "innerBordersX": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "innerBordersY": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/Header"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/Image"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "imageUrl": {
+                    "$ref": "#/definitions/types/eaed55d5b6aed7dcbd86417a1082bc6d"
+                  },
+                  "title": {
+                    "$ref": "#/definitions/types/1118b6172edb82c73783651c99f16919"
+                  },
+                  "sourceWidth": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "sourceHeight": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/PageContent"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/Slider"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "slidesPerView": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "spaceBetween": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "navigation": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "pagination": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "centeredSlides": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplay": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplayDelay": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "pauseOnMouseEnter": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/basic-ui/Text"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "hasHtml": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "text": {
+                    "$ref": "#/definitions/types/1118b6172edb82c73783651c99f16919"
+                  },
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/cart/AddToCart"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/cart/CartIcon"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "displayCount": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "onClick": {
+                    "$ref": "#/definitions/types/21b349e880f3a6497587032b36cb33d0"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/cart/SideCart"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "autoOpen": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoOpenGracePeriod": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "autoCloseTimeout": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "autoCloseTimeoutOnMouseLeave": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/CategoryDataContext"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "categoryKey": {
+                    "$ref": "#/definitions/types/c516d85bdd614ad30b850150a17760ba"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/CategoryName"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/CategoryNavBar"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "mobileMenu": {
+                    "$ref": "#/definitions/types/8d9e33f7ae922cd4922bc7962f5ba628"
+                  },
+                  "justify": {
+                    "$ref": "#/definitions/types/849dabc4b146b297e7ce81b4f236d42c"
+                  },
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/FacetsSidebar"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "mobileMode": {
+                    "$ref": "#/definitions/types/8d9e33f7ae922cd4922bc7962f5ba628"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductCard"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "productKey": {
+                    "$ref": "#/definitions/types/c978ef32468507736aec970c5a672c91"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductDataContext"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "productKey": {
+                    "$ref": "#/definitions/types/c978ef32468507736aec970c5a672c91"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductDescription"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductGallery"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "slidesPerView": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "spaceBetween": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "navigation": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "pagination": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "centeredSlides": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplay": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplayDelay": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "pauseOnMouseEnter": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductName"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductOptions"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductPrice"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductReferencePrice"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductsCarousel"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "productKeys": {
+                    "$ref": "#/definitions/types/c978ef32468507736aec970c5a672c91"
+                  },
+                  "slidesPerView": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "spaceBetween": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "navigation": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "pagination": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "centeredSlides": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplay": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplayDelay": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "pauseOnMouseEnter": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductsGrid"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "productsPerPage": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "columns": {
+                    "$ref": "#/definitions/types/dc09dd69d06ab6307be99e3f94ca7c65"
+                  },
+                  "gap": {
+                    "$ref": "#/definitions/types/cd0ce2a6c86a2b0e84c696c4a215d361"
+                  },
+                  "innerBordersX": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "innerBordersY": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/ProductsPagination"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "componentReference": {
+                    "$ref": "#/definitions/types/c4028dde3de06f52ddc3f8874aff906a"
+                  },
+                  "showControls": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "align": {
+                    "$ref": "#/definitions/types/7615f56d445c16ba9925d234facb2e5d"
+                  },
+                  "siblings": {
+                    "$ref": "#/definitions/types/70ccebc54140aaff758c7260e764cee6"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/catalog/RelatedProductsCarousel"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "slidesPerView": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "spaceBetween": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "navigation": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "pagination": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "centeredSlides": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplay": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "autoplayDelay": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "pauseOnMouseEnter": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/content/PageContent"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/content/PageDataContext"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "pageKey": {
+                    "$ref": "#/definitions/types/1118b6172edb82c73783651c99f16919"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/componentItem"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/content/PageImage"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "sourceWidth": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "sourceHeight": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/customer/ModifyAddresses"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "columns": {
+                    "$ref": "#/definitions/types/dc09dd69d06ab6307be99e3f94ca7c65"
+                  },
+                  "gap": {
+                    "$ref": "#/definitions/types/cd0ce2a6c86a2b0e84c696c4a215d361"
+                  },
+                  "innerBordersX": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "innerBordersY": {
+                    "$ref": "#/definitions/types/e61a873ee2ca3d121dcf671940c0c9ce"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/customer/OrdersTable"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/search/SearchBar"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "minChars": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "maxResults": {
+                    "$ref": "#/definitions/types/72b0323e7e012d84c429e12a03697a8e"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/search/SearchTerm"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "$ref": "#/definitions/types/21e32ee7e66d18a1d84c0593c0a044d3"
+                  },
+                  "textAlign": {
+                    "$ref": "#/definitions/types/c442132f2ae5f9a77b3a2057a7e2b100"
+                  },
+                  "textColor": {
+                    "$ref": "#/definitions/types/57f4d2ac0ed7d337f7e55145111f54a8"
+                  },
+                  "letterSpacing": {
+                    "$ref": "#/definitions/types/2b87c26899d0edbd6b6018a6c770ae92"
+                  },
+                  "leading": {
+                    "$ref": "#/definitions/types/a74e80ba8b3f5e6f75c71990843e80a7"
+                  },
+                  "fontWeight": {
+                    "$ref": "#/definitions/types/5c02d313c2d12e6ce14229c4f860377a"
+                  },
+                  "fontStyle": {
+                    "$ref": "#/definitions/types/fd41287497cfd1c8452960a500e85a28"
+                  },
+                  "textDecoration": {
+                    "$ref": "#/definitions/types/f2155f52e7777dd774a52691fc16515a"
+                  },
+                  "textDecorationColor": {
+                    "$ref": "#/definitions/types/13d23b609b8becf1bac55e7f50031244"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/user/LoginForm"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "redirect": {
+                    "$ref": "#/definitions/types/70b6fd9bf191a7c926a7d7112f850e6d"
+                  },
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/user/ModifyUserData"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "@seada.io/user/UserIcon"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "$ref": "#/definitions/componentsEnum"
+              },
+              "id": {
+                "type": "string"
+              },
+              "props": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "$ref": "#/definitions/types/97de319aab505809d2d81b434673d0cf"
+                  },
+                  "size": {
+                    "$ref": "#/definitions/types/5db1cb16cedf1d22ed68231c29b1e37e"
+                  },
+                  "minSize": {
+                    "$ref": "#/definitions/types/428f91038582271cead96a5de48f4db5"
+                  },
+                  "maxSize": {
+                    "$ref": "#/definitions/types/a1e09ba154a81287aa8bfa38b8ba706d"
+                  },
+                  "margin": {
+                    "$ref": "#/definitions/types/0c460e5ab01e56d22d48279a4a63be1d"
+                  },
+                  "padding": {
+                    "$ref": "#/definitions/types/f636c1cb6246355e2b7acc8450d10f18"
+                  },
+                  "aspectRatio": {
+                    "$ref": "#/definitions/types/784bb28374fb599b7a6dd94427ce4102"
+                  },
+                  "borderWidth": {
+                    "$ref": "#/definitions/types/5c02aa5513ca75223d25da8429f9c433"
+                  },
+                  "borderRadius": {
+                    "$ref": "#/definitions/types/fbb6b95021512a38ea85170d6c34b516"
+                  },
+                  "borderColor": {
+                    "$ref": "#/definitions/types/9e913b6bb24091dcca3d5a84eb01ad4b"
+                  },
+                  "borderStyle": {
+                    "$ref": "#/definitions/types/cd7186af8ac5a15416c78e9b77bcc4cb"
+                  },
+                  "backgroundImage": {
+                    "$ref": "#/definitions/types/7f296813a7156deb96de42f0a7edc7ef"
+                  },
+                  "overlayColor": {
+                    "$ref": "#/definitions/types/70b26bb872ed89784aa1bc3e69a01b9d"
+                  },
+                  "overlayOpacity": {
+                    "$ref": "#/definitions/types/7de377e0805b87e846be2996b60750d7"
+                  }
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "else": false
+        }
+      ]
+    },
+    "componentsEnum": {
+      "type": "string",
+      "enum": [
+        "@seada.io/basic-ui/Banner",
+        "@seada.io/basic-ui/Box",
+        "@seada.io/basic-ui/ColumnsLayout",
+        "@seada.io/basic-ui/FlexLayout",
+        "@seada.io/basic-ui/GridLayout",
+        "@seada.io/basic-ui/Header",
+        "@seada.io/basic-ui/Image",
+        "@seada.io/basic-ui/PageContent",
+        "@seada.io/basic-ui/Slider",
+        "@seada.io/basic-ui/Text",
+        "@seada.io/cart/AddToCart",
+        "@seada.io/cart/CartIcon",
+        "@seada.io/cart/SideCart",
+        "@seada.io/catalog/CategoryDataContext",
+        "@seada.io/catalog/CategoryName",
+        "@seada.io/catalog/CategoryNavBar",
+        "@seada.io/catalog/FacetsSidebar",
+        "@seada.io/catalog/ProductCard",
+        "@seada.io/catalog/ProductDataContext",
+        "@seada.io/catalog/ProductDescription",
+        "@seada.io/catalog/ProductGallery",
+        "@seada.io/catalog/ProductName",
+        "@seada.io/catalog/ProductOptions",
+        "@seada.io/catalog/ProductPrice",
+        "@seada.io/catalog/ProductReferencePrice",
+        "@seada.io/catalog/ProductsCarousel",
+        "@seada.io/catalog/ProductsGrid",
+        "@seada.io/catalog/ProductsPagination",
+        "@seada.io/catalog/RelatedProductsCarousel",
+        "@seada.io/content/PageContent",
+        "@seada.io/content/PageDataContext",
+        "@seada.io/content/PageImage",
+        "@seada.io/customer/ModifyAddresses",
+        "@seada.io/customer/OrdersTable",
+        "@seada.io/search/SearchBar",
+        "@seada.io/search/SearchTerm",
+        "@seada.io/user/LoginForm",
+        "@seada.io/user/ModifyUserData",
+        "@seada.io/user/UserIcon"
+      ]
+    },
+    "types": {
+      "21b349e880f3a6497587032b36cb33d0": {
+        "description": "@seada.io/cart/OnCartClick",
+        "$ref": "#/definitions/OnCartClick"
+      },
+      "c516d85bdd614ad30b850150a17760ba": {
+        "description": "@seada.io/catalog/Category",
+        "$ref": "#/definitions/Category"
+      },
+      "c978ef32468507736aec970c5a672c91": {
+        "description": "@seada.io/catalog/ProductsPicker",
+        "$ref": "#/definitions/ProductsPicker"
+      },
+      "c4028dde3de06f52ddc3f8874aff906a": {
+        "description": "@seada.io/core-schema/ComponentReference",
+        "$ref": "#/definitions/ComponentReference"
+      },
+      "70ccebc54140aaff758c7260e764cee6": {
+        "description": "@seada.io/core-schema/Dropdown",
+        "$ref": "#/definitions/Dropdown"
+      },
+      "eaed55d5b6aed7dcbd86417a1082bc6d": {
+        "description": "@seada.io/core-schema/Image",
+        "type": "string",
+        "format": "uri"
+      },
+      "04489df92ce18c04e208a6c6ba33cae7": {
+        "description": "@seada.io/core-schema/Link",
+        "type": "string",
+        "format": "uri"
+      },
+      "8d9e33f7ae922cd4922bc7962f5ba628": {
+        "description": "@seada.io/core-schema/MobileMode",
+        "type": "boolean"
+      },
+      "72b0323e7e012d84c429e12a03697a8e": {
+        "description": "@seada.io/core-schema/SimpleNumber",
+        "type": "number"
+      },
+      "1118b6172edb82c73783651c99f16919": {
+        "description": "@seada.io/core-schema/SimpleText",
+        "type": "string"
+      },
+      "e61a873ee2ca3d121dcf671940c0c9ce": {
+        "description": "@seada.io/core-schema/Switch",
+        "type": "boolean"
+      },
+      "965d5078c7148d3fe5393dcad2c3be0c": {
+        "description": "@seada.io/core-schema/TwAlignItemsVertical",
+        "$ref": "#/definitions/TwAlignItemsVertical"
+      },
+      "784bb28374fb599b7a6dd94427ce4102": {
+        "description": "@seada.io/core-schema/TwAspectRatio",
+        "$ref": "#/definitions/TwAspectRatio"
+      },
+      "70b26bb872ed89784aa1bc3e69a01b9d": {
+        "description": "@seada.io/core-schema/TwBackgroundColor",
+        "$ref": "#/definitions/TwColor"
+      },
+      "7f296813a7156deb96de42f0a7edc7ef": {
+        "description": "@seada.io/core-schema/TwBackgroundImage",
+        "type": "string",
+        "format": "uri"
+      },
+      "7de377e0805b87e846be2996b60750d7": {
+        "description": "@seada.io/core-schema/TwBackgroundOpacity",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100,
+        "multipleOf": 5
+      },
+      "9e913b6bb24091dcca3d5a84eb01ad4b": {
+        "description": "@seada.io/core-schema/TwBorderColor",
+        "$ref": "#/definitions/TwColor"
+      },
+      "fbb6b95021512a38ea85170d6c34b516": {
+        "description": "@seada.io/core-schema/TwBorderRadius",
+        "$ref": "#/definitions/TwBorderRadius"
+      },
+      "cd7186af8ac5a15416c78e9b77bcc4cb": {
+        "description": "@seada.io/core-schema/TwBorderStyle",
+        "$ref": "#/definitions/TwBorderStyle"
+      },
+      "5c02aa5513ca75223d25da8429f9c433": {
+        "description": "@seada.io/core-schema/TwBorderWidth",
+        "$ref": "#/definitions/TwBorderWidth"
+      },
+      "14c75b909f8ca2212c389c1a11918489": {
+        "description": "@seada.io/core-schema/TwColumns",
+        "$ref": "#/definitions/TwColumns"
+      },
+      "7615f56d445c16ba9925d234facb2e5d": {
+        "description": "@seada.io/core-schema/TwFlexAlignItems",
+        "$ref": "#/definitions/TwFlexAlignItems"
+      },
+      "da72f084f4411c6a596127f20ecf9a47": {
+        "description": "@seada.io/core-schema/TwFlexBasis",
+        "$ref": "#/definitions/TwSizeDimensions"
+      },
+      "d6832be61173cf488c6f227c5bf73a11": {
+        "description": "@seada.io/core-schema/TwFlexDirection",
+        "$ref": "#/definitions/TwFlexDirection"
+      },
+      "e6e0cfc7c8f5a2e2c51990d959eb8df2": {
+        "description": "@seada.io/core-schema/TwFlexGrow",
+        "$ref": "#/definitions/TwFlexGrow"
+      },
+      "849dabc4b146b297e7ce81b4f236d42c": {
+        "description": "@seada.io/core-schema/TwFlexJustify",
+        "$ref": "#/definitions/TwFlexJustify"
+      },
+      "b7e4b016a8edf9d7fc650a2b6d79a020": {
+        "description": "@seada.io/core-schema/TwFlexShrink",
+        "$ref": "#/definitions/TwFlexGrow"
+      },
+      "21e32ee7e66d18a1d84c0593c0a044d3": {
+        "description": "@seada.io/core-schema/TwFontSize",
+        "$ref": "#/definitions/TwFontSize"
+      },
+      "fd41287497cfd1c8452960a500e85a28": {
+        "description": "@seada.io/core-schema/TwFontStyle",
+        "$ref": "#/definitions/TwFontStyle"
+      },
+      "5c02d313c2d12e6ce14229c4f860377a": {
+        "description": "@seada.io/core-schema/TwFontWeight",
+        "$ref": "#/definitions/TwFontWeight"
+      },
+      "cd0ce2a6c86a2b0e84c696c4a215d361": {
+        "description": "@seada.io/core-schema/TwGap",
+        "$ref": "#/definitions/TwNumericSize"
+      },
+      "dc09dd69d06ab6307be99e3f94ca7c65": {
+        "description": "@seada.io/core-schema/TwGridColumns",
+        "$ref": "#/definitions/TwGridColumns"
+      },
+      "a74e80ba8b3f5e6f75c71990843e80a7": {
+        "description": "@seada.io/core-schema/TwLeading",
+        "$ref": "#/definitions/TwLeading"
+      },
+      "2b87c26899d0edbd6b6018a6c770ae92": {
+        "description": "@seada.io/core-schema/TwLetterSpacing",
+        "$ref": "#/definitions/TwLetterSpacing"
+      },
+      "0c460e5ab01e56d22d48279a4a63be1d": {
+        "description": "@seada.io/core-schema/TwMargin",
+        "$ref": "#/definitions/TwMargin"
+      },
+      "a1e09ba154a81287aa8bfa38b8ba706d": {
+        "description": "@seada.io/core-schema/TwMaxSizeDimensions",
+        "$ref": "#/definitions/TwSizeDimensions"
+      },
+      "428f91038582271cead96a5de48f4db5": {
+        "description": "@seada.io/core-schema/TwMinSizeDimensions",
+        "$ref": "#/definitions/TwSizeDimensions"
+      },
+      "f636c1cb6246355e2b7acc8450d10f18": {
+        "description": "@seada.io/core-schema/TwPadding",
+        "$ref": "#/definitions/TwMargin"
+      },
+      "5db1cb16cedf1d22ed68231c29b1e37e": {
+        "description": "@seada.io/core-schema/TwSizeDimensions",
+        "$ref": "#/definitions/TwSizeDimensions"
+      },
+      "c442132f2ae5f9a77b3a2057a7e2b100": {
+        "description": "@seada.io/core-schema/TwTextAlign",
+        "$ref": "#/definitions/TwTextAlign"
+      },
+      "57f4d2ac0ed7d337f7e55145111f54a8": {
+        "description": "@seada.io/core-schema/TwTextColor",
+        "$ref": "#/definitions/TwColor"
+      },
+      "f2155f52e7777dd774a52691fc16515a": {
+        "description": "@seada.io/core-schema/TwTextDecoration",
+        "$ref": "#/definitions/TwTextDecoration"
+      },
+      "13d23b609b8becf1bac55e7f50031244": {
+        "description": "@seada.io/core-schema/TwTextDecorationColor",
+        "$ref": "#/definitions/TwColor"
+      },
+      "97de319aab505809d2d81b434673d0cf": {
+        "description": "@seada.io/core-schema/TwVisibility",
+        "$ref": "#/definitions/TwVisibility"
+      },
+      "4b55b2183956729da9fb92d0487473f2": {
+        "description": "@seada.io/core-schema/Url",
+        "type": "string",
+        "format": "uri"
+      },
+      "70b6fd9bf191a7c926a7d7112f850e6d": {
+        "description": "@seada.io/user/LoginRedirect",
+        "$ref": "#/definitions/LoginRedirect"
+      }
+    },
+    "OnCartClick": {
+      "type": "string",
+      "enum": [
+        "sidecart",
+        "cart"
+      ]
+    },
+    "Category": {
+      "type": "string"
+    },
+    "ProductsPicker": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ComponentReference": {
+      "type": "string"
+    },
+    "Dropdown": {
+      "type": "string"
+    },
+    "TwAlignItemsVertical": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "start",
+            "center",
+            "end"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "start",
+                "center",
+                "end"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwAspectRatio": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "auto",
+            "square",
+            "video",
+            "portrait",
+            "wide",
+            "panoramic",
+            "wide-portrait",
+            "ultra-wide",
+            "crt-portrait",
+            "crt"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "square",
+                "video",
+                "portrait",
+                "wide",
+                "panoramic",
+                "wide-portrait",
+                "ultra-wide",
+                "crt-portrait",
+                "crt"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "square",
+                "video",
+                "portrait",
+                "wide",
+                "panoramic",
+                "wide-portrait",
+                "ultra-wide",
+                "crt-portrait",
+                "crt"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "square",
+                "video",
+                "portrait",
+                "wide",
+                "panoramic",
+                "wide-portrait",
+                "ultra-wide",
+                "crt-portrait",
+                "crt"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "square",
+                "video",
+                "portrait",
+                "wide",
+                "panoramic",
+                "wide-portrait",
+                "ultra-wide",
+                "crt-portrait",
+                "crt"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "square",
+                "video",
+                "portrait",
+                "wide",
+                "panoramic",
+                "wide-portrait",
+                "ultra-wide",
+                "crt-portrait",
+                "crt"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwColor": {
+      "type": "string",
+      "enum": [
+        "inherit",
+        "current",
+        "transparent",
+        "black",
+        "white",
+        "slate-50",
+        "slate-100",
+        "slate-200",
+        "slate-300",
+        "slate-400",
+        "slate-500",
+        "slate-600",
+        "slate-700",
+        "slate-800",
+        "slate-900",
+        "slate-950",
+        "gray-50",
+        "gray-100",
+        "gray-200",
+        "gray-300",
+        "gray-400",
+        "gray-500",
+        "gray-600",
+        "gray-700",
+        "gray-800",
+        "gray-900",
+        "gray-950",
+        "zinc-50",
+        "zinc-100",
+        "zinc-200",
+        "zinc-300",
+        "zinc-400",
+        "zinc-500",
+        "zinc-600",
+        "zinc-700",
+        "zinc-800",
+        "zinc-900",
+        "zinc-950",
+        "neutral-50",
+        "neutral-100",
+        "neutral-200",
+        "neutral-300",
+        "neutral-400",
+        "neutral-500",
+        "neutral-600",
+        "neutral-700",
+        "neutral-800",
+        "neutral-900",
+        "neutral-950",
+        "stone-50",
+        "stone-100",
+        "stone-200",
+        "stone-300",
+        "stone-400",
+        "stone-500",
+        "stone-600",
+        "stone-700",
+        "stone-800",
+        "stone-900",
+        "stone-950",
+        "red-50",
+        "red-100",
+        "red-200",
+        "red-300",
+        "red-400",
+        "red-500",
+        "red-600",
+        "red-700",
+        "red-800",
+        "red-900",
+        "red-950",
+        "orange-50",
+        "orange-100",
+        "orange-200",
+        "orange-300",
+        "orange-400",
+        "orange-500",
+        "orange-600",
+        "orange-700",
+        "orange-800",
+        "orange-900",
+        "orange-950",
+        "amber-50",
+        "amber-100",
+        "amber-200",
+        "amber-300",
+        "amber-400",
+        "amber-500",
+        "amber-600",
+        "amber-700",
+        "amber-800",
+        "amber-900",
+        "amber-950",
+        "yellow-50",
+        "yellow-100",
+        "yellow-200",
+        "yellow-300",
+        "yellow-400",
+        "yellow-500",
+        "yellow-600",
+        "yellow-700",
+        "yellow-800",
+        "yellow-900",
+        "yellow-950",
+        "lime-50",
+        "lime-100",
+        "lime-200",
+        "lime-300",
+        "lime-400",
+        "lime-500",
+        "lime-600",
+        "lime-700",
+        "lime-800",
+        "lime-900",
+        "lime-950",
+        "green-50",
+        "green-100",
+        "green-200",
+        "green-300",
+        "green-400",
+        "green-500",
+        "green-600",
+        "green-700",
+        "green-800",
+        "green-900",
+        "green-950",
+        "emerald-50",
+        "emerald-100",
+        "emerald-200",
+        "emerald-300",
+        "emerald-400",
+        "emerald-500",
+        "emerald-600",
+        "emerald-700",
+        "emerald-800",
+        "emerald-900",
+        "emerald-950",
+        "teal-50",
+        "teal-100",
+        "teal-200",
+        "teal-300",
+        "teal-400",
+        "teal-500",
+        "teal-600",
+        "teal-700",
+        "teal-800",
+        "teal-900",
+        "teal-950",
+        "cyan-50",
+        "cyan-100",
+        "cyan-200",
+        "cyan-300",
+        "cyan-400",
+        "cyan-500",
+        "cyan-600",
+        "cyan-700",
+        "cyan-800",
+        "cyan-900",
+        "cyan-950",
+        "sky-50",
+        "sky-100",
+        "sky-200",
+        "sky-300",
+        "sky-400",
+        "sky-500",
+        "sky-600",
+        "sky-700",
+        "sky-800",
+        "sky-900",
+        "sky-950",
+        "blue-50",
+        "blue-100",
+        "blue-200",
+        "blue-300",
+        "blue-400",
+        "blue-500",
+        "blue-600",
+        "blue-700",
+        "blue-800",
+        "blue-900",
+        "blue-950",
+        "indigo-50",
+        "indigo-100",
+        "indigo-200",
+        "indigo-300",
+        "indigo-400",
+        "indigo-500",
+        "indigo-600",
+        "indigo-700",
+        "indigo-800",
+        "indigo-900",
+        "indigo-950",
+        "violet-50",
+        "violet-100",
+        "violet-200",
+        "violet-300",
+        "violet-400",
+        "violet-500",
+        "violet-600",
+        "violet-700",
+        "violet-800",
+        "violet-900",
+        "violet-950",
+        "purple-50",
+        "purple-100",
+        "purple-200",
+        "purple-300",
+        "purple-400",
+        "purple-500",
+        "purple-600",
+        "purple-700",
+        "purple-800",
+        "purple-900",
+        "purple-950",
+        "fuchsia-50",
+        "fuchsia-100",
+        "fuchsia-200",
+        "fuchsia-300",
+        "fuchsia-400",
+        "fuchsia-500",
+        "fuchsia-600",
+        "fuchsia-700",
+        "fuchsia-800",
+        "fuchsia-900",
+        "fuchsia-950",
+        "pink-50",
+        "pink-100",
+        "pink-200",
+        "pink-300",
+        "pink-400",
+        "pink-500",
+        "pink-600",
+        "pink-700",
+        "pink-800",
+        "pink-900",
+        "pink-950",
+        "rose-50",
+        "rose-100",
+        "rose-200",
+        "rose-300",
+        "rose-400",
+        "rose-500",
+        "rose-600",
+        "rose-700",
+        "rose-800",
+        "rose-900",
+        "rose-950"
+      ]
+    },
+    "TwBorderRadius": {
+      "oneOf": [
+        {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "none",
+                "sm",
+                "DEFAULT",
+                "md",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl",
+                "full",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 4,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "sm",
+                  "DEFAULT",
+                  "md",
+                  "lg",
+                  "xl",
+                  "2xl",
+                  "3xl",
+                  "full",
+                  "small",
+                  "medium",
+                  "large"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "sm",
+                    "DEFAULT",
+                    "md",
+                    "lg",
+                    "xl",
+                    "2xl",
+                    "3xl",
+                    "full",
+                    "small",
+                    "medium",
+                    "large"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "DEFAULT",
+                      "md",
+                      "lg",
+                      "xl",
+                      "2xl",
+                      "3xl",
+                      "full",
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  }
+                }
+              ]
+            },
+            "lg": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "sm",
+                    "DEFAULT",
+                    "md",
+                    "lg",
+                    "xl",
+                    "2xl",
+                    "3xl",
+                    "full",
+                    "small",
+                    "medium",
+                    "large"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "DEFAULT",
+                      "md",
+                      "lg",
+                      "xl",
+                      "2xl",
+                      "3xl",
+                      "full",
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  }
+                }
+              ]
+            },
+            "md": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "sm",
+                    "DEFAULT",
+                    "md",
+                    "lg",
+                    "xl",
+                    "2xl",
+                    "3xl",
+                    "full",
+                    "small",
+                    "medium",
+                    "large"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "DEFAULT",
+                      "md",
+                      "lg",
+                      "xl",
+                      "2xl",
+                      "3xl",
+                      "full",
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  }
+                }
+              ]
+            },
+            "sm": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "sm",
+                    "DEFAULT",
+                    "md",
+                    "lg",
+                    "xl",
+                    "2xl",
+                    "3xl",
+                    "full",
+                    "small",
+                    "medium",
+                    "large"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "DEFAULT",
+                      "md",
+                      "lg",
+                      "xl",
+                      "2xl",
+                      "3xl",
+                      "full",
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  }
+                }
+              ]
+            },
+            "xs": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "sm",
+                    "DEFAULT",
+                    "md",
+                    "lg",
+                    "xl",
+                    "2xl",
+                    "3xl",
+                    "full",
+                    "small",
+                    "medium",
+                    "large"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "sm",
+                      "DEFAULT",
+                      "md",
+                      "lg",
+                      "xl",
+                      "2xl",
+                      "3xl",
+                      "full",
+                      "small",
+                      "medium",
+                      "large"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwBorderStyle": {
+      "type": "string",
+      "enum": [
+        "none",
+        "solid",
+        "dashed",
+        "dotted",
+        "double"
+      ]
+    },
+    "TwBorderWidth": {
+      "oneOf": [
+        {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "8",
+                "DEFAULT",
+                "small",
+                "medium",
+                "large",
+                "1.5"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 4,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "8",
+                  "DEFAULT",
+                  "small",
+                  "medium",
+                  "large",
+                  "1.5"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "8",
+                    "DEFAULT",
+                    "small",
+                    "medium",
+                    "large",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "8",
+                      "DEFAULT",
+                      "small",
+                      "medium",
+                      "large",
+                      "1.5"
+                    ]
+                  }
+                }
+              ]
+            },
+            "lg": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "8",
+                    "DEFAULT",
+                    "small",
+                    "medium",
+                    "large",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "8",
+                      "DEFAULT",
+                      "small",
+                      "medium",
+                      "large",
+                      "1.5"
+                    ]
+                  }
+                }
+              ]
+            },
+            "md": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "8",
+                    "DEFAULT",
+                    "small",
+                    "medium",
+                    "large",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "8",
+                      "DEFAULT",
+                      "small",
+                      "medium",
+                      "large",
+                      "1.5"
+                    ]
+                  }
+                }
+              ]
+            },
+            "sm": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "8",
+                    "DEFAULT",
+                    "small",
+                    "medium",
+                    "large",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "8",
+                      "DEFAULT",
+                      "small",
+                      "medium",
+                      "large",
+                      "1.5"
+                    ]
+                  }
+                }
+              ]
+            },
+            "xs": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "8",
+                    "DEFAULT",
+                    "small",
+                    "medium",
+                    "large",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "0",
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "5",
+                      "8",
+                      "DEFAULT",
+                      "small",
+                      "medium",
+                      "large",
+                      "1.5"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwColumns": {
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 12
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "lg": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "md": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "sm": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "xs": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwFlexAlignItems": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "start",
+            "end",
+            "center",
+            "baseline",
+            "stretch"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "baseline",
+                "stretch"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "baseline",
+                "stretch"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "baseline",
+                "stretch"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "baseline",
+                "stretch"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "baseline",
+                "stretch"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwSizeDimensions": {
+      "oneOf": [
+        {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/TwNumericSize"
+            },
+            {
+              "$ref": "#/definitions/TwRelativeSize"
+            }
+          ]
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/TwNumericSize"
+              },
+              {
+                "$ref": "#/definitions/TwRelativeSize"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "TwNumericSize": {
+      "oneOf": [
+        {
+          "anyOf": [
+            {
+              "const": "auto"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "14",
+                "16",
+                "20",
+                "24",
+                "28",
+                "32",
+                "36",
+                "40",
+                "44",
+                "48",
+                "52",
+                "56",
+                "60",
+                "64",
+                "72",
+                "80",
+                "96",
+                "128",
+                "144",
+                "160",
+                "192",
+                "224",
+                "256",
+                "px",
+                "0.5",
+                "1.5",
+                "2.5",
+                "3.5",
+                "screen-xs",
+                "screen-sm",
+                "screen-md",
+                "screen-lg",
+                "screen-xl",
+                "screen-2xl"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "anyOf": [
+                {
+                  "const": "auto"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "14",
+                    "16",
+                    "20",
+                    "24",
+                    "28",
+                    "32",
+                    "36",
+                    "40",
+                    "44",
+                    "48",
+                    "52",
+                    "56",
+                    "60",
+                    "64",
+                    "72",
+                    "80",
+                    "96",
+                    "128",
+                    "144",
+                    "160",
+                    "192",
+                    "224",
+                    "256",
+                    "px",
+                    "0.5",
+                    "1.5",
+                    "2.5",
+                    "3.5",
+                    "screen-xs",
+                    "screen-sm",
+                    "screen-md",
+                    "screen-lg",
+                    "screen-xl",
+                    "screen-2xl"
+                  ]
+                }
+              ]
+            },
+            "lg": {
+              "anyOf": [
+                {
+                  "const": "auto"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "14",
+                    "16",
+                    "20",
+                    "24",
+                    "28",
+                    "32",
+                    "36",
+                    "40",
+                    "44",
+                    "48",
+                    "52",
+                    "56",
+                    "60",
+                    "64",
+                    "72",
+                    "80",
+                    "96",
+                    "128",
+                    "144",
+                    "160",
+                    "192",
+                    "224",
+                    "256",
+                    "px",
+                    "0.5",
+                    "1.5",
+                    "2.5",
+                    "3.5",
+                    "screen-xs",
+                    "screen-sm",
+                    "screen-md",
+                    "screen-lg",
+                    "screen-xl",
+                    "screen-2xl"
+                  ]
+                }
+              ]
+            },
+            "md": {
+              "anyOf": [
+                {
+                  "const": "auto"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "14",
+                    "16",
+                    "20",
+                    "24",
+                    "28",
+                    "32",
+                    "36",
+                    "40",
+                    "44",
+                    "48",
+                    "52",
+                    "56",
+                    "60",
+                    "64",
+                    "72",
+                    "80",
+                    "96",
+                    "128",
+                    "144",
+                    "160",
+                    "192",
+                    "224",
+                    "256",
+                    "px",
+                    "0.5",
+                    "1.5",
+                    "2.5",
+                    "3.5",
+                    "screen-xs",
+                    "screen-sm",
+                    "screen-md",
+                    "screen-lg",
+                    "screen-xl",
+                    "screen-2xl"
+                  ]
+                }
+              ]
+            },
+            "sm": {
+              "anyOf": [
+                {
+                  "const": "auto"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "14",
+                    "16",
+                    "20",
+                    "24",
+                    "28",
+                    "32",
+                    "36",
+                    "40",
+                    "44",
+                    "48",
+                    "52",
+                    "56",
+                    "60",
+                    "64",
+                    "72",
+                    "80",
+                    "96",
+                    "128",
+                    "144",
+                    "160",
+                    "192",
+                    "224",
+                    "256",
+                    "px",
+                    "0.5",
+                    "1.5",
+                    "2.5",
+                    "3.5",
+                    "screen-xs",
+                    "screen-sm",
+                    "screen-md",
+                    "screen-lg",
+                    "screen-xl",
+                    "screen-2xl"
+                  ]
+                }
+              ]
+            },
+            "xs": {
+              "anyOf": [
+                {
+                  "const": "auto"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "14",
+                    "16",
+                    "20",
+                    "24",
+                    "28",
+                    "32",
+                    "36",
+                    "40",
+                    "44",
+                    "48",
+                    "52",
+                    "56",
+                    "60",
+                    "64",
+                    "72",
+                    "80",
+                    "96",
+                    "128",
+                    "144",
+                    "160",
+                    "192",
+                    "224",
+                    "256",
+                    "px",
+                    "0.5",
+                    "1.5",
+                    "2.5",
+                    "3.5",
+                    "screen-xs",
+                    "screen-sm",
+                    "screen-md",
+                    "screen-lg",
+                    "screen-xl",
+                    "screen-2xl"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwRelativeSize": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "1/12",
+        "2/12",
+        "3/12",
+        "4/12",
+        "5/12",
+        "6/12",
+        "7/12",
+        "8/12",
+        "9/12",
+        "10/12",
+        "11/12",
+        "full"
+      ]
+    },
+    "TwFlexDirection": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "row",
+            "col",
+            "row-reverse",
+            "col-reverse"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "row",
+                "col",
+                "row-reverse",
+                "col-reverse"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "row",
+                "col",
+                "row-reverse",
+                "col-reverse"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "row",
+                "col",
+                "row-reverse",
+                "col-reverse"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "row",
+                "col",
+                "row-reverse",
+                "col-reverse"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "row",
+                "col",
+                "row-reverse",
+                "col-reverse"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwFlexGrow": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "boolean"
+            },
+            "lg": {
+              "type": "boolean"
+            },
+            "md": {
+              "type": "boolean"
+            },
+            "sm": {
+              "type": "boolean"
+            },
+            "xs": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwFlexJustify": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "start",
+            "end",
+            "center",
+            "between",
+            "around",
+            "evenly",
+            "stretch"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "between",
+                "around",
+                "evenly",
+                "stretch"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "between",
+                "around",
+                "evenly",
+                "stretch"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "between",
+                "around",
+                "evenly",
+                "stretch"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "between",
+                "around",
+                "evenly",
+                "stretch"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "between",
+                "around",
+                "evenly",
+                "stretch"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwFontSize": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "xs",
+            "sm",
+            "base",
+            "lg",
+            "xl",
+            "2xl",
+            "3xl",
+            "4xl",
+            "5xl",
+            "6xl",
+            "7xl",
+            "8xl",
+            "9xl",
+            "tiny",
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "base",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "7xl",
+                "8xl",
+                "9xl",
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "base",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "7xl",
+                "8xl",
+                "9xl",
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "base",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "7xl",
+                "8xl",
+                "9xl",
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "base",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "7xl",
+                "8xl",
+                "9xl",
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "base",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "7xl",
+                "8xl",
+                "9xl",
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwFontStyle": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "italic",
+            "not-italic"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "italic",
+                "not-italic"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "italic",
+                "not-italic"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "italic",
+                "not-italic"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "italic",
+                "not-italic"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "italic",
+                "not-italic"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwFontWeight": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "thin",
+            "extralight",
+            "light",
+            "normal",
+            "medium",
+            "semibold",
+            "bold",
+            "extrabold",
+            "black"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "thin",
+                "extralight",
+                "light",
+                "normal",
+                "medium",
+                "semibold",
+                "bold",
+                "extrabold",
+                "black"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "thin",
+                "extralight",
+                "light",
+                "normal",
+                "medium",
+                "semibold",
+                "bold",
+                "extrabold",
+                "black"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "thin",
+                "extralight",
+                "light",
+                "normal",
+                "medium",
+                "semibold",
+                "bold",
+                "extrabold",
+                "black"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "thin",
+                "extralight",
+                "light",
+                "normal",
+                "medium",
+                "semibold",
+                "bold",
+                "extrabold",
+                "black"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "thin",
+                "extralight",
+                "light",
+                "normal",
+                "medium",
+                "semibold",
+                "bold",
+                "extrabold",
+                "black"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwGridColumns": {
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 12
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "lg": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "md": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "sm": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "xs": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 12
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwLeading": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "none",
+            "tight",
+            "snug",
+            "normal",
+            "relaxed",
+            "loose"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "none",
+                "tight",
+                "snug",
+                "normal",
+                "relaxed",
+                "loose"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "none",
+                "tight",
+                "snug",
+                "normal",
+                "relaxed",
+                "loose"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "none",
+                "tight",
+                "snug",
+                "normal",
+                "relaxed",
+                "loose"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "none",
+                "tight",
+                "snug",
+                "normal",
+                "relaxed",
+                "loose"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "none",
+                "tight",
+                "snug",
+                "normal",
+                "relaxed",
+                "loose"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwLetterSpacing": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "tighter",
+            "tight",
+            "normal",
+            "wide",
+            "wider",
+            "widest"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "tighter",
+                "tight",
+                "normal",
+                "wide",
+                "wider",
+                "widest"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "tighter",
+                "tight",
+                "normal",
+                "wide",
+                "wider",
+                "widest"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "tighter",
+                "tight",
+                "normal",
+                "wide",
+                "wider",
+                "widest"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "tighter",
+                "tight",
+                "normal",
+                "wide",
+                "wider",
+                "widest"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "tighter",
+                "tight",
+                "normal",
+                "wide",
+                "wider",
+                "widest"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwMargin": {
+      "oneOf": [
+        {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/TwNumericSize"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 4,
+              "items": {
+                "$ref": "#/definitions/TwNumericSize"
+              }
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/TwNumericSize"
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "$ref": "#/definitions/TwNumericSize"
+                  }
+                }
+              ]
+            },
+            "lg": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/TwNumericSize"
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "$ref": "#/definitions/TwNumericSize"
+                  }
+                }
+              ]
+            },
+            "md": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/TwNumericSize"
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "$ref": "#/definitions/TwNumericSize"
+                  }
+                }
+              ]
+            },
+            "sm": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/TwNumericSize"
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "$ref": "#/definitions/TwNumericSize"
+                  }
+                }
+              ]
+            },
+            "xs": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/TwNumericSize"
+                },
+                {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "items": {
+                    "$ref": "#/definitions/TwNumericSize"
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwTextAlign": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwTextDecoration": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "no-underline",
+            "underline",
+            "line-through",
+            "overline"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "no-underline",
+                "underline",
+                "line-through",
+                "overline"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "no-underline",
+                "underline",
+                "line-through",
+                "overline"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "no-underline",
+                "underline",
+                "line-through",
+                "overline"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "no-underline",
+                "underline",
+                "line-through",
+                "overline"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "no-underline",
+                "underline",
+                "line-through",
+                "overline"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "TwVisibility": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "visible",
+            "invisible",
+            "hidden"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string",
+              "enum": [
+                "visible",
+                "invisible",
+                "hidden"
+              ]
+            },
+            "lg": {
+              "type": "string",
+              "enum": [
+                "visible",
+                "invisible",
+                "hidden"
+              ]
+            },
+            "md": {
+              "type": "string",
+              "enum": [
+                "visible",
+                "invisible",
+                "hidden"
+              ]
+            },
+            "sm": {
+              "type": "string",
+              "enum": [
+                "visible",
+                "invisible",
+                "hidden"
+              ]
+            },
+            "xs": {
+              "type": "string",
+              "enum": [
+                "visible",
+                "invisible",
+                "hidden"
+              ]
+            }
+          },
+          "required": [
+            "default"
+          ]
+        }
+      ]
+    },
+    "LoginRedirect": {
+      "type": "string",
+      "enum": [
+        "none",
+        "home",
+        "account"
+      ]
+    }
+  }
+}

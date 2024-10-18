@@ -1,0 +1,2 @@
+ignore-patterns: [".turbo","generated"]
+ignores: ["@seada.io/*", "@seada.io.source/*", "tsconfig", "ts-jest","eslint-*", "@typescript-eslint/eslint-*", "@testing-library/*", "jest-transform-stub"]

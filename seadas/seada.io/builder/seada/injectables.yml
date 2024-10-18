@@ -1,0 +1,9 @@
+builder-storage-adapters:
+  type: map
+  value:
+    filesystem:
+      type: reference
+      value: "@seada.io/builder/service/storage/adapters/filesystem"
+    vercel-blob:
+      type: reference
+      value: "@seada.io/builder/service/storage/adapters/vercel-blob"

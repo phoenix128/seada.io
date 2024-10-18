@@ -1,0 +1,19 @@
+adapter-router-handlers:
+  value:
+    wordpress:
+      type: reference
+      value: "@seada.io/wordpress/service/page-router/router"
+wordpress-resource-router-handlers:
+  type: map
+  value:
+    Page:
+      type: reference
+      value: "@seada.io/wordpress/service/page-router/resource/page-router"
+    Post:
+      type: reference
+      value: "@seada.io/wordpress/service/page-router/resource/post-router"
+source-setups:
+  value:
+    wordpress:
+      type: reference
+      value: "@seada.io/wordpress/service/source-setup/setup"

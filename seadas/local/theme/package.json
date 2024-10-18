@@ -1,0 +1,17 @@
+{
+  "name": "@seada.theme/theme",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\" --fix"
+  },
+  "dependencies": {
+    "@seada.io/core": "*",
+    "@seada.io/cart": "*",
+    "@seada.io/basic-ui": "*",
+    "tailwind-variants": "^0.2.1"
+  },
+  "devDependencies": {
+  }
+}

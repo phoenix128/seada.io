@@ -1,0 +1,36 @@
+"@seada.io/core/spi/page-router/router":
+  default:
+    handlers: "router-handlers"
+"@seada.io/core/service/page-router/adapter-routers":
+  default:
+    adapterHandlers: "adapter-router-handlers"
+"@seada.io/core/spi/data-providers/get-data-providers":
+  default:
+    dataProviders: "data-providers"
+"@seada.io/core/spi/adapters/get-data-provider-adapter":
+  default:
+    dataProviderAdapters: "data-provider-adapters"
+"@seada.io/core/spi/seada-pages/manipulation/apply-component-prop-middleware":
+  default:
+    middlewares: "component-props-middlewares"
+"@seada.io/core/spi/components/get-page-components":
+  default:
+    components: "page-components"
+"@seada.io/core/service/get-root-contexts":
+  default:
+    contexts: "root-contexts"
+"@seada.io/core/service/get-i18n":
+  default:
+    resourceProviders: "i18n-providers"
+"@seada.io/core/service/get-adapter-hook":
+  default:
+    adaptersHooks: "hooks-adapters"
+"@seada.io/core/spi/cache/get-cache":
+  default:
+    cacheStoreFactories: "cache-store-factories"
+"@seada.io/core/service/source-setup/get-source-setups":
+  default:
+    setups: "source-setups"
+"@seada.io/core/service/get-port-classes":
+  default:
+    portClasses: "port-classes"

@@ -1,0 +1,19 @@
+.ErrorComponent {
+    @apply bg-red-950 text-white p-4 border-4 border-dashed border-red-200;
+}
+
+.ErrorTitle {
+    @apply text-white;
+}
+
+.ErrorDescription {
+    @apply text-red-200 italic text-sm;
+}
+
+.DataPayload {
+    @apply text-white text-xs mt-2 font-mono bg-red-800 p-1;
+}
+
+.DataPayloadTitle {
+    @apply text-white font-bold mb-1;
+}

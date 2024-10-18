@@ -1,0 +1,43 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "**/.env.*local",
+    "**/seada/*.yml",
+    "seadas/**/tailwind.config.cjs",
+    "seadas/**/tailwind.extend.cjs"
+  ],
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "cache": false,
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "depcheck": {
+      "outputs": [],
+      "cache": false
+    },
+    "dev": {
+      "cache": false
+    },
+    "test": {},
+    "bakery:compile": {
+      "cache": false
+    },
+    "bakery:clean": {
+      "cache": false
+    },
+    "source:setup": {
+      "cache": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+adapter-router-handlers:
+  value:
+    algolia:
+      type: reference
+      value: "@seada.io/algolia/service/page-router/router"
+
+source-setups:
+  value:
+    algolia:
+      type: reference
+      value: "@seada.io/algolia/service/source-setup/setup"

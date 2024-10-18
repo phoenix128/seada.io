@@ -1,0 +1,111 @@
+# yaml-language-server: $schema=../../../../../seadas/seada.io/core-schema-ui/generated/json-schema/layouts.json
+
+components:
+  - type: '@seada.io/basic-ui/Header'
+    id: header
+    props:
+      text: Sada.io Demo Site
+      size:
+        default:
+          - auto
+          - 14
+      leading:
+        default: tight
+      fontSize:
+        default: xl
+      textAlign: center
+      fontWeight:
+        default: bold
+      textColor: gray-800
+      link: /
+  - type: '@seada.io/commerce-ui/CategoryNavBar'
+    id: navbar
+    props:
+      overlayColor: gray-50
+      overlayOpacity: 100
+      textColor: gray-600
+      borderWidth:
+        default:
+          - '1'
+          - '0'
+          - '1'
+          - '0'
+      borderRadius:
+        default:
+          - none
+          - none
+          - none
+          - none
+      borderColor: gray-300
+      justify: center
+      fontWeight:
+        default: semibold
+      fontSize:
+        default: sm
+      size:
+        default:
+          - auto
+          - 12
+    source: bigcommerce
+  - id: b6ef0cf5-fab6-4323-91fc-3cb42b8208d2
+    label: Page Wrapper
+    type: '@seada.io/basic-ui/Box'
+    props:
+      size:
+        default: 11/12
+        md: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        - 0
+        - auto
+      padding:
+        default: 2
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: 0
+      borderColor: transparent
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: f78711b6-d8d3-4c26-897f-232b2ed4e335
+        label: Page Content
+        type: '@seada.io/basic-ui/PageContent'
+        props:
+          size: full
+          minSize: auto
+          maxSize: auto
+          margin: 0
+          padding: 0
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius:
+            default:
+              - none
+              - none
+              - none
+              - none
+          borderColor: transparent
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+  - id: 5118cf83-43e4-490d-858a-20aa9fb0e02c
+    label: Side Cart
+    type: '@seada.io/commerce-ui/SideCart'
+    props:
+      columns: 2
+      gap: 2
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: 0
+      padding: 0
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    source: bigcommerce

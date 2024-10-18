@@ -1,0 +1,79 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Dev",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "run",
+                "dev"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Backery",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "run",
+                "seada-bakery"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Create Page Component",
+            "type": "shell",
+            "command": "node ${workspaceFolder}/.vscode/scripts/generate-page-component.js \\\"${input:moduleName}\\\" \\\"${input:componentName}\\\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "componentName",
+            "type": "promptString",
+            "description": "Name of the React component"
+        },
+        {
+            "id": "moduleName",
+            "type": "pickString",
+            "description": "Select the seada module",
+            "options": [
+                "@seada.theme/theme",
+                "@seada.io/algolia",
+                "@seada.io/basic-ui",
+                "@seada.io/bigcommerce",
+                "@seada.io/builder",
+                "@seada.io/builder-copilot",
+                "@seada.io/cart",
+                "@seada.io/catalog",
+                "@seada.io/catalog-search",
+                "@seada.io/content",
+                "@seada.io/core",
+                "@seada.io/core-schema",
+                "@seada.io/customer",
+                "@seada.io/foundation-ui",
+                "@seada.io/search",
+                "@seada.io/sortable-tree",
+                "@seada.io/user",
+                "@seada.io/wordpress"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+.BorderTopLeft {
+    @apply hidden w-2 h-2 absolute top-0 left-0 border-t-2 border-l-2 border-white rounded-tl-sm z-10;
+}
+
+.BorderTopRight {
+    @apply hidden w-2 h-2 absolute top-0 right-0 border-t-2 border-r-2 border-white rounded-tr-sm z-10;
+}
+
+.BorderBottomRight {
+    @apply hidden w-2 h-2 absolute bottom-0 right-0 border-b-2 border-r-2 border-white rounded-br-sm z-10;
+}
+
+.BorderBottomLeft {
+    @apply hidden w-2 h-2 absolute bottom-0 left-0 border-b-2 border-l-2 border-white rounded-bl-sm z-10;
+}
+
+.Cardinal {
+    @apply relative;
+}
+
+.CardinalAll {
+    .BorderBottomLeft {
+        @apply block;
+    }
+
+    .BorderBottomRight {
+        @apply block;
+    }
+
+    .BorderTopLeft {
+        @apply block;
+    }
+
+    .BorderTopRight {
+        @apply block;
+    }
+}
+
+.CardinalTop {
+    .BorderTopLeft {
+        @apply block;
+    }
+
+    .BorderTopRight {
+        @apply block;
+    }
+}
+
+.CardinalRight {
+    .BorderTopRight {
+        @apply block;
+    }
+
+    .BorderBottomRight {
+        @apply block;
+    }
+}
+
+.CardinalBottom {
+    .BorderBottomRight {
+        @apply block;
+    }
+
+    .BorderBottomLeft {
+        @apply block;
+    }
+}
+
+.CardinalLeft {
+    .BorderBottomLeft {
+        @apply block;
+    }
+
+    .BorderTopLeft {
+        @apply block;
+    }
+}
+
+.CardinalTopLeft {
+    .BorderTopLeft {
+        @apply block;
+    }
+}
+
+.CardinalTopRight {
+    .BorderTopRight {
+        @apply block;
+    }
+}
+
+.CardinalBottomRight {
+    .BorderBottomRight {
+        @apply block;
+    }
+}
+
+.CardinalBottomLeft {
+    .BorderBottomLeft {
+        @apply block;
+    }
+}
+
+
+
+

@@ -1,0 +1,37 @@
+.ComponentNode {
+    @apply h-7;
+}
+
+.ComponentNodeContent {
+    @apply text-foreground py-2 text-xs flex flex-row h-7 rounded-md;
+
+    &:hover {
+        @apply bg-default-50;
+
+        .TrashWrapper {
+            @apply block bg-danger rounded-full h-full aspect-square scale-[3] p-0.5 mr-2 z-50;
+        }
+    }
+}
+
+.Handle {
+    @apply w-5 h-5 mr-2 text-gray-500;
+}
+
+.TrashIcon {
+    @apply w-2 h-2;
+}
+
+.TrashWrapper {
+    @apply hidden;
+}
+
+.Label {
+    @apply flex-grow;
+}
+
+.Selected {
+    .ComponentNodeContent {
+        @apply bg-default-100;
+    }
+}

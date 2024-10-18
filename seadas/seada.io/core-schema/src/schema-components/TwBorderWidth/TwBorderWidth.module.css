@@ -1,0 +1,27 @@
+.CardinalAll {
+    @apply border-[2px] rounded-md;
+}
+
+.CardinalNorth {
+    @apply border-t-[2px] rounded-md -mt-[2px];
+}
+
+.CardinalEast {
+    @apply border-r-[2px] rounded-md;
+}
+
+.CardinalSouth {
+    @apply border-b-[2px] rounded-md;
+}
+
+.CardinalWest {
+    @apply border-l-[2px] rounded-md;
+}
+
+.CardinalVertical {
+    @apply border-t-[2px] border-b-[2px] rounded-md;
+}
+
+.CardinalHorizontal {
+    @apply border-l-[2px] border-r-[2px] rounded-md;
+}

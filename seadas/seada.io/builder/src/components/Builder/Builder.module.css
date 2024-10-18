@@ -1,0 +1,39 @@
+.Builder {
+    @apply w-screen h-screen flex flex-col overflow-hidden;
+}
+
+.OperationalArea {
+    @apply flex flex-row flex-grow overflow-hidden;
+}
+
+.TreeTabsFlex {
+    @apply w-full;
+}
+
+.TreeTabTitle {
+    @apply flex flex-row items-center gap-2;
+}
+
+.TreeArea {
+    @apply mt-1 p-2 w-64 flex-shrink-0 flex-grow-0 overflow-y-auto;
+}
+
+.PropsArea {
+    @apply w-96 flex-shrink-0 flex-grow-0 overflow-y-auto;
+}
+
+.ScrollShadow {
+    @apply w-full h-full;
+}
+
+.PreviewArea {
+    @apply w-full flex-grow flex flex-col items-center justify-center;
+}
+
+.PreviewToolbar {
+    @apply h-16 w-auto;
+}
+
+.Header {
+
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@seada.io/algolia",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\" --fix",
+    "depcheck": "depcheck"
+  },
+  "dependencies": {
+    "@seada.io/core": "*",
+    "@seada.io/search": "*",
+    "@seada.io/catalog": "*",
+    "@seada.io/catalog-search": "*",
+    "react": "^18.3.1",
+    "algoliasearch": "^4.24.0",
+    "string-strip-html": "^13.4.8",
+    "@algolia/client-search": "^4.24.0"
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.7",
+    "typescript": "^5.2.2"
+  }
+}

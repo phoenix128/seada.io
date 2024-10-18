@@ -1,0 +1,6 @@
+"@seada.io/builder-copilot/service/get-copilot-instructions":
+  default:
+    instructions: "copilot-instructions"
+"@seada.io/builder-copilot/service/get-excluded-components":
+  default:
+    excludedComponents: "copilot-excluded-components"

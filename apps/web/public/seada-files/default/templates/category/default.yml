@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema-ui/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: 2e1b44ed-7609-4be4-904f-77374bc07f33
+    label: Flex Layout
+    type: '@seada.io/basic-ui/FlexLayout'
+    props:
+      flexDirection: row
+      flexAlign: start
+      gap:
+        default: '4'
+      size:
+        default: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        default:
+          - '4'
+          - '0'
+      padding:
+        default: '0'
+      aspectRatio: auto
+      borderWidth: '0'
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+    children:
+      - id: 8521ff1a-8a32-47b7-85aa-2370e87b2b8a
+        label: Facets Sidebar
+        type: '@seada.io/commerce-ui/FacetsSidebar'
+        props:
+          size:
+            default: 4/12
+            sm: 5/12
+          minSize: auto
+          maxSize: auto
+          margin:
+            default:
+              - '0'
+              - '0'
+              - '0'
+              - '1'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+      - id: 39893dec-1980-4ddf-b648-36658ec75b9a
+        label: Products Grid
+        type: '@seada.io/commerce-ui/ProductsGrid'
+        props:
+          size:
+            default: full
+            sm: 8/12
+            md: 9/12
+          minSize: auto
+          maxSize: auto
+          margin: '0'
+          padding: '0'
+          aspectRatio: auto
+          borderWidth: '0'
+          borderRadius: none
+          borderColor: black
+          borderStyle: solid
+          overlayColor: transparent
+          overlayOpacity: 100
+          columns:
+            default: '4'
+            sm: '2'
+            md: '3'
+          gap:
+            default: '4'
+  - id: aa7df4ad-9ef5-4323-a30c-24484c8a213d
+    label: Products Pagination
+    type: '@seada.io/commerce-ui/ProductsPagination'
+    props:
+      showControls: true
+      align: center
+      siblings: '1'
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin: '0'
+      padding: '0'
+      aspectRatio: auto

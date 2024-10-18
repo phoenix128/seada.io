@@ -1,0 +1,22 @@
+{
+  "name": "@seada.io/catalog-search",
+  "description": "Adds catalog search functionality to the seada.io platform.",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\" --fix",
+    "test": "jest",
+    "depcheck": "depcheck"
+  },
+  "dependencies": {
+    "@seada.io/catalog": "*",
+    "@seada.io/search": "*",
+    "@seada.io/core": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.2",
+    "depcheck": "^1.4.7",
+    "typescript": "^5.2.2"
+  }
+}

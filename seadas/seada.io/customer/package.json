@@ -1,0 +1,33 @@
+{
+  "name": "@seada.io/customer",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\" --fix",
+    "test": "jest",
+    "depcheck": "depcheck"
+  },
+  "dependencies": {
+    "@seada.io/core": "*",
+    "@seada.io/basic-ui": "*",
+    "@seada.io/foundation-ui": "*",
+    "@seada.io/core-schema": "*",
+    "@seada.io/catalog": "*",
+    "react": "^18.3.1",
+    "tailwind-variants": "^0.2.1",
+    "react-i18next": "^14.0.0",
+    "i18next": "^23.7.16",
+    "react-icons": "^5.0.1",
+    "@nextui-org/react": "^2.4.1",
+    "react-dom": "^18.3.1",
+    "countries-list": "^3.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.2",
+    "depcheck": "^1.4.7",
+    "typescript": "^5.2.2",
+    "ts-jest": "^29.1.1"
+  }
+}

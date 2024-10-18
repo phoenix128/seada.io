@@ -1,0 +1,6 @@
+product-card-actions:
+  type: array
+  value: [ ]
+port-classes:
+  value:
+    - catalog

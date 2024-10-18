@@ -1,0 +1,11 @@
+.Wrapper {
+    @apply relative mt-0.5;
+}
+
+.RelativeSwitch {
+    @apply flex flex-row items-center text-xs absolute -top-6 -right-2;
+}
+
+.Dimension {
+    @apply h-10 flex flex-row items-center;
+}

@@ -1,0 +1,3 @@
+"@seada.io/wordpress/service/page-router/router":
+  default:
+    resourceRouters: "wordpress-resource-router-handlers"

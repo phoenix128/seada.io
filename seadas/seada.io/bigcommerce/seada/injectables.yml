@@ -1,0 +1,38 @@
+adapter-router-handlers:
+  value:
+    bigcommerce:
+      type: reference
+      value: "@seada.io/bigcommerce/service/page-router/router"
+bigcommerce-static-router-handlers:
+  type: array
+  value:
+    - type: reference
+      value: "@seada.io/bigcommerce/service/page-router/static/account-router"
+    - type: reference
+      value: "@seada.io/bigcommerce/service/page-router/static/search-router"
+bigcommerce-resource-router-handlers:
+  type: map
+  value:
+    Category:
+      type: reference
+      value: "@seada.io/bigcommerce/service/page-router/resource/category-router"
+    Product:
+      type: reference
+      value: "@seada.io/bigcommerce/service/page-router/resource/product-router"
+catalog-quick-search-transformers:
+  type: map
+  value:
+    bigcommerce-algolia:
+      type: reference
+      value: "@seada.io/bigcommerce/service/catalog-search-transformers/algolia/quick-search-transformer"
+catalog-search-result-transformers:
+  type: map
+  value:
+    bigcommerce-algolia:
+      type: reference
+      value: "@seada.io/bigcommerce/service/catalog-search-transformers/algolia/search-result-transformer"
+source-setups:
+  value:
+    bigcommerce:
+      type: reference
+      value: "@seada.io/bigcommerce/service/source-setup/setup"

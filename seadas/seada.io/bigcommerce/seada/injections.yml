@@ -1,0 +1,4 @@
+"@seada.io/bigcommerce/service/page-router/router":
+  default:
+    resourceRouters: "bigcommerce-resource-router-handlers"
+    staticRouters: "bigcommerce-static-router-handlers"

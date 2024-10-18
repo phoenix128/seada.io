@@ -1,0 +1,6 @@
+"@seada.io/catalog-search/spi/get-catalog-quick-search-transformers":
+  default:
+    transformers: catalog-quick-search-transformers
+"@seada.io/catalog-search/spi/get-catalog-search-result-transformers":
+  default:
+    transformers: catalog-search-result-transformers

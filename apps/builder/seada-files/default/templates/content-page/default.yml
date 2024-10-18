@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=../../../../../../seadas/seada.io/core-schema/generated/json-schema/templates.json
+
+layout: default
+components:
+  - id: 1192df6e-4a14-4c50-b071-cb6b2a081282
+    label: Page Title
+    type: '@seada.io/basic-ui/Header'
+    props:
+      hasHtml: false
+      text: Lorem Ipsum...
+      link: ''
+      fontSize: base
+      textAlign: left
+      textColor: black
+      letterSpacing: normal
+      leading: normal
+      fontWeight: bold
+      fontStyle: not-italic
+      textDecoration: no-underline
+      textDecorationColor: black
+      size: full
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '4'
+        - '0'
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100
+  - id: 441df51d-4f26-4679-91c7-f820a8b103ff
+    label: ''
+    type: '@seada.io/content/PageImage'
+    props:
+      size: 9/12
+      minSize: auto
+      maxSize: auto
+      margin: auto
+      padding: 0
+      aspectRatio: wide
+      borderWidth: 0
+      borderRadius: xl
+      borderColor: black
+      borderStyle: solid
+      overlayColor: gray-500
+      overlayOpacity: 50
+      sourceWidth: 600
+      sourceHeight: 600
+  - id: aebc3ec4-3987-437e-9e89-c5bb9cb5dec1
+    label: ''
+    type: '@seada.io/content/PageContent'
+    props:
+      fontSize: sm
+      textAlign: left
+      textColor: black
+      letterSpacing: normal
+      leading: relaxed
+      fontWeight: normal
+      fontStyle: not-italic
+      textDecoration: no-underline
+      textDecorationColor: black
+      size: 9/12
+      minSize: auto
+      maxSize: auto
+      margin:
+        - '5'
+        - auto
+      padding: 0
+      aspectRatio: auto
+      borderWidth: 0
+      borderRadius: none
+      borderColor: black
+      borderStyle: solid
+      overlayColor: transparent
+      overlayOpacity: 100

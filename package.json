@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "workspaces": [
+    "seada-bakery",
+    "apps/*",
+    "packages/*",
+    "seadas/*/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "force-build": "turbo run build --force",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "depcheck": "turbo run depcheck",
+    "bakery:compile": "turbo run bakery:compile",
+    "bakery:clean": "turbo run bakery:clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "source:setup": "turbo run source:setup"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "^2.0.14"
+  },
+  "packageManager": "npm@10.2.3",
+  "dependencies": {
+    "tsc": "^2.0.4"
+  },
+  "name": "seada.io"
+}
